@@ -22,10 +22,6 @@ header{
     background-color: #2BDDFC;
     height: 100px;
 }
-
-.submit .input .label{
-    text-align: right;
-}
 h1{
     float: left;
     margin-left: 20px;

@@ -1,36 +1,43 @@
 'use strict';
-let firstName = prompt('What is your first name!')
-let time = prompt('What time is it (0-24?)');
-let message = '';
-if(time <= 11 && time != '' && time != 0){
-    message = 'Good morning!'
-    //console.log('Good morning!!!')
-} else if(time <= 18){
-    message = 'Good afternoon!'
-    //console.log('Good afternoon!!!')
-} else if(time <= 24){
-    message = 'Good evening!'
-    //console.log('Good evening!!!')
-} else{
-    message = 'Good day!'
-    //console.log('Have a great day!')
-}
-// console.log('done with program');
-// Uses not equal to !=, to set boundries. So if a user enters a string instead of integer, it will default to 'Good day!'
-
-
-document.write('Hello ' + firstName + '! ' + message);
-
-function getInput() {
-    var x = document.getElementById('text').value;
-    // console.log(x)
-    if (x === 'red') {
-        document.body.style.background = '#F50000';
-    } else if (x === 'green') {
-        document.body.style.background = '#73F53A';
-    } else {
-        window.alert("Please enter either green or red");
+function getUserInput() {
+    let firstName = prompt('What is your first name!');
+    let time = prompt('What time is it (0-24?)');
+    let message = '';
+    if(time <= 11 && time != '' && time != 0) {
+        message = 'Good morning!';
+        //console.log('Good morning!!!');
+    } else if(time <= 18){
+        message = 'Good afternoon!';
+        //console.log('Good afternoon!!!');
+    } else if(time <= 24){
+        message = 'Good evening!';
+        //console.log('Good evening!!!');
+    } else{
+        message = 'Good day!';
+        //console.log('Have a great day!');
     }
+    // Uses not equal to !=, to set boundries. So if a user enters a string instead of integer, it will default to 'Good day!'
+    document.write('Hello ' + firstName + '! ' + message);
+    // console.log('done with getUserInput');
+}
+
+function getColor() {
+    let userColor = document.getElementById('text').value;
+    document.body.style.backgroundColor = userColor;
+    // console.log(x)
+    if (userColor != document.body.style.backgroundColor) {
+        window.alert("Please enter a real color (don't put spaces)");
+    }
+}
+function resetColor() {
+    // Resets the default background color
+    if (document.getElementById('reset').onclick) {
+        let baseColor = document.body.style.background = '#8B8B8B';
+        document.body.style.backgroundColor = baseColor;
+    }
+}
+function ouch() {
+    window.confirm("Ouch that hurt :(")
 }
 
 
