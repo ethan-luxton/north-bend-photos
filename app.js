@@ -37,10 +37,13 @@ function resetColor() {
     }
 }
 function ouch() {
-    window.confirm("Ouch that hurt :(")
+    return window.confirm("Ouch that hurt :(")
 }
-
-
-
-
-
+function getUserNumber() {
+    let userNumber = document.getElementById('userNumber').value;
+    let output = '';
+        for(let x = 0; x < userNumber; x++) { 
+            output = output + '<img id="starimg" style="width: 50px;" src="https://i.imgur.com/7T97nJj.png">'
+        }
+    return document.getElementById('placehere').innerHTML += output
+}
